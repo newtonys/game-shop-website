@@ -92,3 +92,9 @@ header {
   text-decoration: none;
   font-size: 0.6rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .userItems .avatar {
+    display: none;
+  }
+}

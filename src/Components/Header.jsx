@@ -1,10 +1,14 @@
 import React from "react";
 import "./header.css";
 import userImg from "../images/profile.png";
-function Header({ toggleActive }) {
+function Header({ toggleActive, active }) {
   return (
     <header>
-      <a href="#" className="menu" onClick={toggleActive}>
+      <a
+        href="#"
+        className={`menu ${active ? "active" : undefined}`}
+        onClick={toggleActive}
+      >
         <i className="bi bi-sliders"></i>
       </a>
       <div className="userItems">

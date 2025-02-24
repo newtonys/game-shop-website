@@ -144,3 +144,38 @@
   opacity: 1;
   transform: scale(1);
 }
+
+@media only screen and (max-width: 600px) {
+  .swiper-slide {
+    width: 275px;
+    height: 175px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 0.75rem;
+  }
+
+  .gameSlider .content .buttons .playBtn {
+    height: 25px;
+    width: 25px;
+  }
+
+  .gameSlider .content h2 {
+    font-size: 1.75rem;
+  }
+
+  .gameSlider .content p {
+    font-size: 0.4rem;
+  }
+
+  .gameSlider .content .buttons .orderBtn {
+    font-size: 0.6rem;
+  }
+}

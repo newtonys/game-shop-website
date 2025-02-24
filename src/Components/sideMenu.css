@@ -51,7 +51,7 @@
 }
 
 .sideMenu .nav li a:hover,
-.sideMenu .nav li a:active {
+.sideMenu .nav li a.active {
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.35);
 }
@@ -80,8 +80,8 @@
 .sideMenu .social li .share {
   background: var(--second);
   padding: 10px;
-  width: 35px;
-  height: 35px;
+  max-width: 35px;
+  max-height: 35px;
   border-radius: 50%;
   transition: 0.3s;
 }
@@ -104,7 +104,7 @@
 }
 
 .sideMenu.active .nav li a {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .sideMenu.active .social {
@@ -112,4 +112,47 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.sideMenu.active .social li a {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .sideMenu {
+    width: 7%;
+    transition: 0.7s;
+    overflow: hidden;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    z-index: 10000;
+    transform: translateX(0);
+  }
+
+  .sideMenu .brand,
+  .sideMenu .navName {
+    display: none;
+    transition: 1s;
+  }
+
+  .sideMenu .nav li a {
+    font-size: 1.2rem;
+  }
+
+  .sideMenu .social {
+    font-size: 1rem;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sideMenu.active {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    left: -100%;
+    transform: translateX(-100%);
+    transition: 0.7s;
+  }
 }

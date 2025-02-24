@@ -12,3 +12,13 @@ section.home .sectionTitle {
 .viewMore:hover {
   color: var(--second);
 }
+
+@media only screen and (max-width: 600px) {
+  .viewMore {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+}
