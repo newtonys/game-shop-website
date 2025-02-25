@@ -57,7 +57,7 @@ function Main() {
   };
 
   const fetchData = () => {
-    fetch("http://newtonys.github.io/game-shop-website/api/gamesData.json")
+    fetch("http://localhost:3000/api/gamesData.json")
       .then((res) => res.json())
       .then((data) => {
         setGames(data);
