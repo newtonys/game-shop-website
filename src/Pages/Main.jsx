@@ -12,10 +12,10 @@ function Main() {
   const [active, setActive] = useState(false);
   const [games, setGames] = useState([]);
 
-  const homeRef = useRef();
-  const categoriesRef = useRef();
-  const libraryRef = useRef();
-  const bagRef = useRef();
+  const homeRef = useRef(null);
+  const categoriesRef = useRef(null);
+  const libraryRef = useRef(null);
+  const bagRef = useRef(null);
 
   const sections = [
     {
@@ -46,16 +46,18 @@ function Main() {
 
   const handleSectionActive = (target) => {
     sections.map((section) => {
-      section.ref.current.classList.remove("active");
-      if (section.ref.current.id === target) {
-        section.ref.current.classList.add("active");
+      if (section.ref.current) {
+        section.ref.current.classList.remove("active");
+        if (section.ref.current.id === target) {
+          section.ref.current.classList.add("active");
+        }
       }
       return section;
     });
   };
 
   const fetchData = () => {
-    fetch("http://localhost:3000/api/gamesData.json")
+    fetch("http://newtonys.github.io/game-shop-website/api/gamesData.json")
       .then((res) => res.json())
       .then((data) => {
         setGames(data);
