@@ -36,7 +36,7 @@
 }
 
 .gameCard .like.active {
-  color: var(--second);
+  color: palevioletred;
 }
 .gameCard span {
   color: #fff;

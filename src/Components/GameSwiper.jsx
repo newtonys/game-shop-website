@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 // import Swiper core and required modules
-import { Pagination, Scrollbar, A11y } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -38,10 +37,10 @@ function GameSwiper({ games }) {
         modifier: 1,
         slideShadows: true,
       }}
-      //autoplay={{
-      //delay: 2500,
-      // disableOnInteraction: false,
-      // }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       modules={[EffectCoverflow, Navigation, Autoplay]}
     >
       {games.map((game) => (

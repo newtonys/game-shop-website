@@ -179,3 +179,38 @@
     font-size: 0.6rem;
   }
 }
+@media only screen and(min-width: 720px) and (max-width: 1025px) {
+  .swiper-slide {
+    width: 350px;
+    height: 200px;
+    padding: 10px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 1rem;
+  }
+
+  .gameSlider .content .buttons .playBtn {
+    height: 25px;
+    width: 25px;
+  }
+
+  .gameSlider .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .gameSlider .content p {
+    font-size: 0.5rem;
+  }
+
+  .gameSlider .content .buttons .orderBtn {
+    font-size: 1rem;
+  }
+}
